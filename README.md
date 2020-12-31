@@ -6,8 +6,6 @@
 
 ### Introduction
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
-
 ![Trained Agent][image1]
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
@@ -43,9 +41,7 @@ Follow the instructions in `Navigation.ipynb` to get started with training/runni
 
 The agent managed to complete the task of collecting 13 bananas on average (sampled from 100 episodes) using Deep Q Learning network with modifications:
 * [Double DQN](https://arxiv.org/abs/1509.06461)
-* [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)
 
-With these improvements over the vanilla DQN, it took the agent only 292 steps to solve the task!
 ![plotted_rewards](https://github.com/khanhvu207/udacity-project-navigation/blob/main/plotted%20rewards.png)
 
 See more details in [Report.pdf](https://github.com/khanhvu207/udacity-project-navigation/blob/main/Report.pdf)
