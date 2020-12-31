@@ -2,7 +2,7 @@ import random
 import numpy as np
 from .SumTree import SumTree
 
-class Memory:  # stored as ( s, a, r, s_ ) in SumTree
+class Memory:
 	e = 0.01
 	a = 0.2
 	beta = 0.4

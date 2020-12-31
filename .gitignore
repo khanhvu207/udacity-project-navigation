@@ -1,4 +1,5 @@
 # Cache files
 __pycache__/
+
 # Dependencies
 venv/
