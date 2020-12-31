@@ -28,6 +28,7 @@ class Agent():
 		# (Prioritized) Replay memory
 		# self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, seed)
 		self.memory = Memory(BUFFER_SIZE)
+		
 		# Update and synchronize Q-target with Q-network every UPDATE_EVERY steps
 		self.t_step = 0
 
@@ -88,8 +89,11 @@ class Agent():
 			self.memory.update(idx, p)
 
 		self.optimizer.zero_grad()
+		
+		# Loss is scaled with Importance Sampling weight
 		loss = (torch.FloatTensor(is_weights).to(device) * F.mse_loss(q_targets, q_expected)).mean()
 		loss.backward()
+		
 		self.optimizer.step()
 		self.update_target_network()
 
