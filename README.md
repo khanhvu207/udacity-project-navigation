@@ -37,3 +37,11 @@ The task is episodic, and in order to solve the environment, your agent must get
 ### Instructions
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+
+### My approach
+
+The agent managed to complete the task of collecting 13 bananas on average (sampled from 100 episodes) using Deep Q Learning network with modifications:
+* [Double DQN](https://arxiv.org/abs/1509.06461)
+* [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)
+
+With these improvements over the vanilla DQN, it took the agent only 292 steps to solve the task!
