@@ -48,4 +48,4 @@ The agent managed to complete the task of collecting 13 bananas on average (samp
 With these improvements over the vanilla DQN, it took the agent only 292 steps to solve the task!
 ![plotted_rewards](https://github.com/khanhvu207/udacity-project-navigation/blob/main/plotted%20rewards.png)
 
-See more details in Report.pdf
+See more details in [Report.pdf](https://github.com/khanhvu207/udacity-project-navigation/blob/main/Report.pdf)
