@@ -53,24 +53,6 @@ class Agent():
 				self.learn()
 
 	def learn(self):
-		# states, actions, rewards, next_states, dones = experiences
-		
-		# # Double DQN
-		# # 1. Action selection from Q-local
-		# q_local_actions = self.qnetwork_local(next_states).detach().max(1)[1].unsqueeze(1)
-
-		# # 2. Action evaluation from Q-target
-		# q_targets_next = self.qnetwork_target(next_states).gather(1, q_local_actions)
-		# q_targets = rewards + (GAMMA * q_targets_next * (1 - dones))
-		
-		# q_expected = self.qnetwork_local(states).gather(1, actions)
-
-		# loss = F.mse_loss(q_targets, q_expected)
-		# self.optimizer.zero_grad()
-		# loss.backward()
-		# self.optimizer.step()
-		
-		# self.update_target_network()
 		mini_batch, idxs, is_weights = self.memory.sample(BATCH_SIZE)
 		mini_batch = np.array(mini_batch, dtype=object).transpose()
 		
